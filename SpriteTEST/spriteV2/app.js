@@ -5,6 +5,7 @@ const imagenMostrada4 = document.querySelector(".imagenMostradaBici4")
 const imagenMostrada5 = document.querySelector(".imagenMostradaBici5")
 const imagenMostrada6 = document.querySelector(".imagenMostradaBici6")
 const imagenMostrada7 = document.querySelector(".imagenMostradaCasco")
+const imagenMostrada8 = document.querySelector(".imagenMostradaCasco2")
 const colores = document.querySelectorAll(".coloresJs");
 const rodados = document.querySelectorAll(".rodado")
 const cards = document.querySelectorAll(".card")
@@ -64,15 +65,24 @@ const cambioDeImagen = (id) => {
         case "manzana":
             imagenMostrada6.setAttribute("src", `./images/${id}.png`)
             break;
-        // case "rojo":
-        //     imagenMostrada7.setAttribute("src", `./img/${id}.png`)
-        //     break;
-        // case "rosado":
-        //     imagenMostrada7.setAttribute("src", `./img/${id}.png`)
-        //     break;
-        // case "naranjita":
-        //     imagenMostrada7.setAttribute("src", `./img/${id}.png`)
-        //     break;
+        case "casco1":
+            imagenMostrada7.setAttribute("src", `./images/${id}.png`)
+            break;
+        case "casco2":
+            imagenMostrada7.setAttribute("src", `./images/${id}.png`)
+            break;
+        case "casco3":
+            imagenMostrada7.setAttribute("src", `./images/${id}.png`)
+            break;
+        case "casco4":
+                imagenMostrada8.setAttribute("src", `./images/${id}.png`)
+                break;
+        case "casco5":
+                imagenMostrada8.setAttribute("src", `./images/${id}.png`)
+                break;
+        case "casco6":
+                imagenMostrada8.setAttribute("src", `./images/${id}.png`)
+                break;
         default:
             break;
     }

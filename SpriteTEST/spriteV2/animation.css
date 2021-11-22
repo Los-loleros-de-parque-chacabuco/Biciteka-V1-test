@@ -163,11 +163,14 @@ body{
 .cards{
     margin-top: 50px;
     border: solid 1px red;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     height: 100%;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
 }
 
 img{
@@ -358,6 +361,46 @@ img{
     align-items: center;
   }
 
+  .card .colores7 span{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color:rgb(11, 164, 235);
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .card .colores7 span:nth-child(2){
+   background-color:white;
+  }
+  .card .colores7 span:nth-child(3){
+   background-color:palevioletred;
+  }
+
+
+  .card .colores8{
+    margin-top: 40px;
+    display: inline-flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .card .colores8 span{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color:black;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .card .colores8 span:nth-child(2){
+   background-color:rgb(255, 251, 0);
+  }
+  .card .colores8 span:nth-child(3){
+   background-color:white;
+  }
+
+
   .card .rodados-contenedor{
     display: flex;
     width: 100%;
@@ -420,10 +463,14 @@ img{
 /*===MEDIA QUERYS===*/
 /*==================*/
 
-/* @media (max-width:888px){
+@media (max-width:577px){
    
   .card{
-    width: 260px;
-    height: 450px;
+    margin: auto;
   }
-} */
+}
+@media (max-width:768px){
+  .card{
+    margin: auto;
+  }
+}
