@@ -1,3 +1,18 @@
+//NAVBAR
+
+let menuToggle = document.querySelector('.menuToggle')
+let navigation = document.querySelector('.navigation')
+
+menuToggle.onclick = function(){
+    menuToggle.classList.toggle('active')
+    navigation.classList.toggle('active')
+}
+
+
+
+
+
+//CARDS
 const imagenMostrada = document.querySelector(".imagenMostradaBici")
 const imagenMostrada2 = document.querySelector(".imagenMostradaBici2")
 const imagenMostrada3 = document.querySelector(".imagenMostradaBici3")
