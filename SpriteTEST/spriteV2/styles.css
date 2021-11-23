@@ -158,6 +158,9 @@ button{
 /*=========================*/
 /*  SECCION QUIENES SOMOS  */
 /*=========================*/
+.section{
+    margin: auto;
+}
 .subtitulo{
     color: white;
     margin-top: 100px;
@@ -169,7 +172,7 @@ button{
     width: 500px;
     max-width: 650px;
     margin-left: 20px;
-    /* border: solid 1px red; */
+    border: solid 1px red;
     margin-top: 30px;
     font-size: 1em;
 }
@@ -189,6 +192,7 @@ button{
 /*=========================*/
 .productos-contain{
     display: flex;
+    margin: auto;
 }
 .productos-title{
     height: 150px;
@@ -429,7 +433,7 @@ button{
     width: 90%;
     top: -10%;
     /* border: solid 1px red; */
-    color: white;
+    color: black;
 }
 .up{
     position: absolute;
@@ -462,6 +466,14 @@ button{
     border: solid 1px red;
     margin-top: 220px;
 }
+
+.valoracion-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
 .rating{
     position: relative;
     flex-direction: row-reverse;
@@ -517,4 +529,180 @@ button{
     text-align: center;
     white-space: nowrap;
     font-size: 36px;
+}
+
+/*====================*/
+/*========MEDIA========*/
+/*====================*/
+
+@media (max-width:926px){
+    .productos-contain{
+        flex-wrap: wrap;
+    }
+}
+@media (max-width:470px){
+    .productos-contain{
+        margin-left: 10%;
+    }
+    .quienes-somos{
+        width: 300px;
+        max-width: 650px;
+        margin-left: 20px;
+        border: solid 1px red;
+        margin-top: 30px;
+        font-size: 1em;
+    }
+    .paragraph-2{
+        top: 10%;
+    }
+    .parrafo-inicio{
+        position: absolute;
+        top: 180%;
+        left: 50%;
+        width: 60%;
+    }
+}
+@media (max-width:360px){
+    .productos-contain{
+        margin-left: 0%;
+    }
+    .valoracion-Text{
+       font-size: 1em;
+    }
+    .textos{
+        right: 5%;
+    }
+    .paragraph-2{
+        position: absolute;
+        top: 200%;
+        left: -10%;
+        width: 100%;
+    }
+}
+@media (max-width:575px){
+    .nav__links{
+        display: none;
+    }
+}
+
+/*==================================================*/
+/*                     test zone                    */
+/*==================================================*/
+
+.btns{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+    z-index: 10;
+}
+.btns .menuToggle ion-icon{
+    font-size: 3em;
+}
+.btns ion-icon{
+    font-size: 1.5em;
+    color: var(--back);
+}
+.btns ion-icon:nth-child(2){
+    display: none;
+}
+.btns.active ion-icon:nth-child(2){
+    display: block;
+}
+.btns.active ion-icon:nth-child(1){
+    display: none;
+}
+
+
+
+.navigation{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--white);
+    z-index: 4;
+    transition: 0.5s;
+    background-color:#24252A;;
+}
+.navigation.active{
+    left: 0;
+}
+.navigation li{
+    list-style: none;
+}
+.navigation li a{
+    display: inline-flex;
+    margin: 5px 0;
+    font-size: 1.25em;
+    text-decoration: none;
+    color: var(--back);
+    padding: 5px 20px;
+    border-radius: 40px;
+    letter-spacing: 1px;
+}
+
+
+
+.aHover{
+    position: relative;
+}
+.aHover2{
+    position: relative;
+}
+.aHover3{
+    position: relative;
+}
+.aHover4{
+    position: relative;
+}
+.aHover::after{
+    content: "";
+    position: absolute;
+    color: white;
+    height: 3px;
+    width: 0;
+    background-color: rgba(0, 136, 169, 1); ;
+    bottom: -10px;
+    transition: 0.3s;  
+}
+.aHover2::after{
+    content: "";
+    position: absolute;
+    color: white;
+    height: 3px;
+    width: 0;
+    background-color: rgba(0, 136, 169, 1); ;
+    bottom: -10px;
+    transition: 0.3s;
+    
+}
+.aHover3::after{
+    content: "";
+    position: absolute;
+    color: white;
+    height: 3px;
+    width: 0;
+    background-color: rgba(0, 136, 169, 1); ;
+    bottom: -10px;
+    transition: 0.3s;  
+}
+
+.aHover:hover::after{
+    width: 3.2em;
+}
+.aHover2:hover::after{
+    width: 3.4em;
+}
+.aHover3:hover::after{
+    width: 2.7em;
 }
